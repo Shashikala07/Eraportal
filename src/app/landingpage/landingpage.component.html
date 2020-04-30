@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    
+</head>
+<body>
+    <div class="">
+      <div class="">
+        <div class=" col-lg-12">
+          <nav class="navbar navbar-expand-lg  rounded" style="background-color: black;">
+            <a class="navbar-brand text-light eralogo" href="#">
+              <img src="assets/1.gif" class="w-50 " >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: unset !important;">
+              <ul class="nav nav-pills mr-auto justify-content-end">
+                
+                <li class="nav-item dropdown">
+                  <a class="nav-link text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-bell"></i>
+                  </a>
+                    <ul class="dropdown-menu">
+                      <li class="head text-light bg-dark">
+                        <div class="row">
+                          <div class="col-lg-12 col-sm-12 col-12">
+                            <span>Notifications</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="notification-box" *ngFor="let notification of notifications |async">
+                        <div class="row">
+                             
+                          <div class="col-lg-8 col-sm-8 col-8">
+                            <strong class="text-info">{{notification.aheading}}</strong>
+                            <div>
+                                  {{notification.content}}
+                            </div>
+                            <small class="text-warning">27.11.2015, 15:00</small>
+                          </div>    
+                        </div>
+                      </li>
+                      <li class="notification-box bg-gray">
+                        <div class="row">
+                           
+                          <div class="col-lg-8 col-sm-8 col-8">
+                            <strong class="text-info">abc</strong>
+                            <div>
+                              Lorem ipsum dolor sit amet, consectetu
+                            </div>
+                            <small class="text-warning">27.11.2015, 15:00</small>
+                          </div>    
+                        </div>
+                      </li>
+                      <li class="notification-box">
+                        <div class="row">
+                          
+                          <div class="col-lg-8 col-sm-8 col-8">
+                            <strong class="text-info">xyz</strong>
+                            <div>
+                              Lorem ipsum dolor sit amet, consectetur etsetsdt
+                            </div>
+                            <small class="text-warning">27.11.2015, 15:00</small>
+                          </div>    
+                        </div>
+                      </li>
+                      <li class="footer bg-dark text-center">
+                        <a href="" class="text-light">View All</a>
+                      </li>
+                    </ul>
+                </li>
+               
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#"><i class="fa fa-pencil fa-fw"></i>Exam</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-light" href="#"> <i class="fa fa-fw fa-user"></i>Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#"><i class="fa fa-fw fa-user"></i>Sign Up</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
+          <!-- //main -->
+  
+          
+        </div>
+           <div class=" container">
+             <div class="row">
+               <img class="smallscreen" src="assets\bg.png" style="background-repeat:no-repeat;background-size:contain;background-position:center" >
+             </div>
+           </div>
+      </div>
+    </div>
+    <footer id="contact" class="sm-padding bg-dark">
+
+      <!-- Container -->
+      <div class="container">
+  
+        <!-- Row -->
+        <div class="row">
+  
+          <div class="section-header text-center">
+            <h2 class="title white-text">Contact us</h2>
+          </div>
+        
+          <div class="col-md-12">
+  
+            <!-- footer logo -->
+            <div class="footer-logo">
+              <a href="#"><img src="assets/era.png" alt="logo"></a>
+            </div>
+            <!-- /footer logo -->
+            <!-- footer follow -->
+            <ul class="footer-follow" style="font-size: 48px;">
+              <li><a href="https://www.facebook.com/eraiitkanpur/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.github.com/ERA-IITK" target="_blank"><i class="fa fa-github"></i></a></li>
+              <li><a href="mailto:eraiitk@gmail.com"><i class="fa fa-envelope"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/era-iitk/" target="_blank"><i class="fa fa-linkedin" target="_blank"></i></a></li>
+              <li><a href="https://www.youtube.com/channel/UCaaEga5jSCEN6ph6w9E9TVQ"><i class="fa fa-youtube" target="_blank"></i></a></li>
+            </ul>
+            <!-- /footer follow -->
+  
+          </div>
+  
+        </div>
+        <!-- /Row -->
+  
+      </div>
+      <!-- /Container -->
+  
+    </footer>
+</body>
+</html>
