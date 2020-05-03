@@ -1,4 +1,6 @@
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database/public_api';
 import { NotificationsService } from './../notifications.service';
+
 
 import { Observable } from 'rxjs';
 import { BackendService } from './../../../public/app/backend.service';
@@ -29,13 +31,17 @@ export class LandingpageComponent implements OnInit {
 
   ref:AngularFirestoreCollection<Notification>;
   notifications:Observable<Notification[]>;
+  
  
 
   
  
 
-  constructor(public db:NotificationsService,private afs:AngularFirestore
-    ) { }
+  constructor(public db:NotificationsService,private afs:AngularFirestore, afDb: AngularFireDatabase
+    ) {
+      afDb.list<Notification>('Notifications').valueChanges().subscribe(console.log);
+      
+     }
 
   ngOnInit() {
     
